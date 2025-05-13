@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Liqa Meeting App</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Style -->
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Liqa - لقاء</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
+
 <body>
+  <!-- The main container for your form -->
+  <div class="container">
+    <h1>لقاء | Liqa</h1>
+    
+    <div class="form">
+      <label for="name">اسمك / Your Name:</label>
+      <input type="text" id="name" placeholder="اكتب اسمك / Enter your name">
 
-  <!-- Header with Logo -->
-  <header>
-    <img src="liqa.jpg" alt="Liqa Logo" class="logo" />
-    <h1>Welcome to Liqa</h1>
-  </header>
+      <label for="room">رمز الاجتماع / Room Code:</label>
+      <input type="text" id="room" placeholder="123-456">
 
-  <!-- Main Content -->
-  <main>
-    <p>Start your meeting below</p>
-    <a href="meeting.html" class="start-button">Start Meeting</a>
-  </main>
+      <div class="buttons">
+        <button onclick="startMeeting()">ابدأ اجتماع / Start Meeting</button>
+        <button onclick="joinMeeting()">انضم الآن / Join Meeting</button>
+      </div>
 
-  <!-- Script -->
+      <div class="copy-section">
+        <input type="text" id="meetingLink" placeholder="Meeting Link Will Show Here" readonly />
+        <button onclick="copyLink()">📋 نسخ / Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JS File -->
   <script src="script.js"></script>
-
 </body>
 </html>
+

@@ -1,44 +1,97 @@
+/* Base setup */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #f3f6f9;
+  direction: rtl;
+  background-image: url('liqa\ copy.jpg');  /* Ensure correct image path here */
+  background-size: cover;  /* Ensure logo covers the entire screen */
+  background-color: rgba(255, 255, 255, 0.2); /* Optional: light background base */
+  background-repeat: no-repeat;  /* Prevent repeating the image */
+  height: 100vh;  /* Ensure it covers the whole screen */
+}
+
+.container {
+  max-width: 500px;
+  margin: 80px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-header {
-  background-color: #ffffff;
-  padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.logo {
-  height: 70px;
-  width: auto;
-  margin-bottom: 10px;
-}
-
 h1 {
-  margin: 0;
-  font-size: 28px;
-  color: #2d89ef;
+  color: #2D9C6B;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-main {
-  margin-top: 50px;
-}
-
-.start-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #2d89ef;
-  color: #fff;
+label {
+  display: block;
+  text-align: right;
   font-size: 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  margin: 15px 0 5px;
+  color: #333;
 }
 
-.start-button:hover {
-  background-color: #1b5cb3;
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #2D9C6B;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #218c5d;
+}
+
+.copy-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.copy-section input {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 14px;
+  }
 }
